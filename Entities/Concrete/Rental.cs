@@ -7,15 +7,21 @@ namespace Entities.Concrete
 {
   public  class Rental:IEntity
     {
+        public Rental()
+        {
+            this.Customers = new List<Customer>();
+        }
         public int Id { get; set; }
 
-        public int CartId { get; set; }
+        public int CarId { get; set; }
 
         public int CustomerId { get; set; }
 
         public DateTime RentDate { get; set; }
 
         public DateTime? ReturnDate { get; set; }
+
+        public List<Customer> Customers { get; set; }
 
     }
 }

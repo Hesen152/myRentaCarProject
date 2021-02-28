@@ -94,7 +94,7 @@ namespace WebAPI.Controllers
         [HttpGet("getcarsdetail")]
         public IActionResult GetCarsDetail()
         {
-            var result = _carService.GetCarsDetail();
+            var result = _carService.GetCarAllDetails();
             if (result.Success)
             {
                 return Ok(result);

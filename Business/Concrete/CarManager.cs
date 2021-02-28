@@ -1,5 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -19,19 +22,20 @@ namespace Business.Concrete
 
         }
 
-        
-
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
 
-            if (car.DailyPrice<=0)
-            {
-
-                return new ErrorResult(Messages.InvalidDailyPrice);
+            //if (car.DailyPrice<=0)
+            //{
 
 
+            //    return new ErrorResult(Messages.InvalidDailyPrice);
 
-            }
+
+            IResult result = BusinessRules.Run();
+            //}
+
 
             _carDal.Add(car);
 
@@ -136,16 +140,16 @@ namespace Business.Concrete
             
         }
 
-        public IDataResult<List<CarDetailDto>> GetCarsDetail()
+        public IDataResult<List<CarAllDetailsDto>> GetCarAllDetails()
         {
-            var carsToGetDetails = _carDal.GetCarsDetail();
+            var carsToGetDetails = _carDal.GetCarAllDetails();
             if (carsToGetDetails is null)
             {
-                return new ErrorDataResult<List<CarDetailDto>>(Messages.NotFound);
+                return new ErrorDataResult<List<CarAllDetailsDto>>(Messages.NotFound);
 
             }
 
-            return new SuccessDataResult<List<CarDetailDto>>(carsToGetDetails, Messages.Listed);
+            return new SuccessDataResult<List<CarAllDetailsDto>>(carsToGetDetails, Messages.Listed);
         }
 
         public IResult Update(Car car)
@@ -172,5 +176,7 @@ namespace Business.Concrete
 
 
         }
+
+      
     }
 }

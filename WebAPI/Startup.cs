@@ -31,10 +31,10 @@ namespace WebAPI
         {
             services.AddControllers();
 
-            services.AddScoped<IBrandService, BrandManager>();
-            services.AddScoped<IBrandDal, EfBrandDal>();
-            services.AddScoped<ICarService, CarManager>();
-            services.AddScoped<ICarDal, EfCarDal>();
+            //services.AddScoped<IBrandService, BrandManager>();
+            //services.AddScoped<IBrandDal, EfBrandDal>();
+            //services.AddScoped<ICarService, CarManager>();
+            //services.AddScoped<ICarDal, EfCarDal>();
                 
         }
 
@@ -43,6 +43,7 @@ namespace WebAPI
         {
             if (env.IsDevelopment())
             {
+               
                 app.UseDeveloperExceptionPage();
             }
 
