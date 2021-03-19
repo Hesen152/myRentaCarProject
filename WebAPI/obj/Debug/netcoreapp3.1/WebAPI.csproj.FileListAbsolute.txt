@@ -135,7 +135,6 @@ C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Autofa
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
-C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -144,3 +143,6 @@ C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Micros
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\bin\Debug\netcoreapp3.1\log4net.dll
+C:\Users\User\source\repos\RenTaCarProyekt\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache

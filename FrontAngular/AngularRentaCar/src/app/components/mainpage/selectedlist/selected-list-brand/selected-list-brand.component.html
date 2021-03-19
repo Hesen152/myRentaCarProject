@@ -1,0 +1,24 @@
+<select
+  style="margin-bottom: 10px; width: 220px"
+  class="form-select form-select-sm"
+  aria-label=".form-select-sm example"
+>
+  <option selected>Open this select menu</option>
+
+  <option
+   *ngFor="let brand of brands"
+    (click)="FilterValue(brand)">
+    {{ brand.name }}
+
+
+  </option>
+</select>
+
+<a
+  style="margin-left: 15px;width:190px;"
+  type="submit"
+  class="btn btn-secondary"
+  routerlink="brands"
+>
+  Filter
+</a>

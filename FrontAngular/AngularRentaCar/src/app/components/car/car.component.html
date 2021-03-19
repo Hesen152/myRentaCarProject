@@ -1,0 +1,54 @@
+<div class="mb-3" style="width:900px">
+<div class="row">
+<div class="col-md-3" style="margin-left:-230px;margin-top:9px;">
+<!--component -->
+<app-selected-list-brand></app-selected-list-brand>
+
+</div>
+
+<div class="col-md-9" >
+  <label for="exampleFormControlInput1" class="form-label">Search..</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="filterText"
+    id="filterText"
+    placeholder="Search  anything"
+  />
+
+<div *ngIf="filterText.length > 2" class="alert alert-success">
+  {{ filterText }} axtardiniz
+</div>
+
+
+
+<div class="row" style="margin-top:15px">
+  <div
+    class="card col-md-2 mb-3 mx-3 pt-3 px-3"
+    style="width: 19rem"
+    *ngFor="let car of cars | carfilterPipe: filterText"
+  >
+    <img
+      class="card-img-top"
+      src="{{ imageUrl }}{{ car.imagePath }}"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Standart</h5>
+      <p class="card-text">{{ car.description }}</p>
+      <p class="card-text">
+        <b>{{ car.carName }} </b>
+      </p>
+
+      <a
+        (click)="setCurrentCar(car)"
+        routerLink="/cars/details/{{ car.id }}"
+        class="btn btn-primary"
+        >Go To Details</a
+      >
+
+      <!--  <a (click)="getRoute(car.id)" class="btn btn-primary">Details</a> -->
+    </div>
+  </div>
+</div>
+</div>

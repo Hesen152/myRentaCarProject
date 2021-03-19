@@ -1,4 +1,5 @@
 ﻿using Core.Entities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,14 +15,19 @@ namespace Entities.Concrete
             this.CarImagess = new List<CarImages>();
         }
 
+       
         public int Id { get; set; }
         public int BrandId { get; set; }
         public int ColorId { get; set; }
+
+       // public int CarImagesId { get; set; }
         public string Name { get; set; }
         public short ModelYear { get; set; }
         public int DailyPrice { get; set; }
         public string Description { get; set; }
+
         //addition for
+        [JsonIgnore]
         public Brand Brand { get; set; }
         public List<Color> Colors { get; set; }
 

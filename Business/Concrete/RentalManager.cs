@@ -3,6 +3,7 @@ using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -83,6 +84,18 @@ namespace Business.Concrete
             return new SuccessDataResult<Rental>(rentalGetById, Messages.Listed);
 
 
+        }
+
+        public IDataResult<List<RentalDetailDto>> GetRentalDetails()
+        {
+            var rentalDetails = _rentalDal.GetRentalDetails();
+            if (rentalDetails is null)
+            {
+                return new ErrorDataResult<List<RentalDetailDto>>(rentalDetails, Messages.NotFound);
+
+            }
+
+            return new SuccessDataResult<List<RentalDetailDto>>(rentalDetails, Messages.Listed);
         }
 
         public IResult Update(Rental rental)

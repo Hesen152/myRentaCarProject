@@ -16,6 +16,8 @@ namespace Entities.Concrete
         public string ImagePath { get; set; }
 
         public DateTime Date { get; set; }
+        public bool IsMain { get; set; }
+
         public Car Car { get; set; }
 
         [NotMapped]

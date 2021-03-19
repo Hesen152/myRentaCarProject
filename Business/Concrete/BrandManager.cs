@@ -40,8 +40,7 @@ namespace Business.Concrete
 
             
         }
-
-        public IResult Delete(Brand brand)
+       public IResult Delete(Brand brand)
         {
             var brandToDelete = _brandDal.Get(c => c.Id == brand.Id);
             if (brandToDelete==null)
@@ -56,6 +55,7 @@ namespace Business.Concrete
             return new SuccesResult(Messages.Deleted);
 
         }
+ 
 
         public IDataResult<List<Brand>> GetAll()
         {
@@ -68,6 +68,8 @@ namespace Business.Concrete
 
             return new SuccessDataResult<List<Brand>>(brandGetAll, Messages.Listed);
         }
+
+    
 
         public IDataResult<Brand> GetById(int brandId)
         {

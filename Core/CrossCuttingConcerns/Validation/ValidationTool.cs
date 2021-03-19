@@ -9,7 +9,7 @@ namespace Core.CrossCuttingConcerns.Validation
     {
             //IValidator now =>Product validator because IValidator interface Impelement ProductValidator
             //object entity now =>product 
-            public static void Validate(IValidator validator, object entity)
+            public static  void Validate(IValidator validator, object entity)
             {
                 var context = new ValidationContext<object>(entity);
                 // ProductValidator productValidator = new ProductValidator();

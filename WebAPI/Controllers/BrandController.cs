@@ -21,6 +21,7 @@ namespace WebAPI.Controllers
             _brandService = brandService;
 
         }
+        //Brand listesinde herhangi bir marka seçildiğinde, o markaya ait arabaları listeleyiniz.
 
 
 
@@ -44,6 +45,7 @@ namespace WebAPI.Controllers
 
         }
 
+             
       
 
 

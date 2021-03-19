@@ -39,6 +39,21 @@ namespace WebAPI.Controllers
         }
 
 
+        [HttpGet("getCarDetails")]
+       public IActionResult GetAllDetails()
+        {
+            var result = _carService.GetCarDetails();
+
+            if (result.Success)
+            {
+                return Ok(result);
+
+            }
+            return BadRequest(result);
+
+        }
+
+
         [HttpGet("getbyid")]
          
         public IActionResult GetById(int id)
@@ -59,24 +74,24 @@ namespace WebAPI.Controllers
             
         }
 
-        [HttpGet("getcarbrandid")]
-         public IActionResult GetCarBrandId(int brandId)
-        {
-            var result = _carService.GetCarsByBrandId(brandId);
+        //[HttpGet("getcarbrandid")]
+        // public IActionResult GetCarBrandId(int brandId)
+        //{
+        //    var result = _carService.GetCarsByBrandId(brandId);
 
-            if (result.Success)
-            {
-                return Ok(result);
+        //    if (result.Success)
+        //    {
+        //        return Ok(result);
 
-            }
+        //    }
 
-            return BadRequest(result.Message);
-
-
+        //    return BadRequest(result.Message);
 
 
 
-        }
+
+
+        //}
 
         [HttpGet("getcarscolorid")]
         public IActionResult GetCarsByColorId(int colorId)
@@ -94,7 +109,7 @@ namespace WebAPI.Controllers
         [HttpGet("getcarsdetail")]
         public IActionResult GetCarsDetail()
         {
-            var result = _carService.GetCarAllDetails();
+            var result = _carService.GetCarDetails();
             if (result.Success)
             {
                 return Ok(result);
@@ -105,9 +120,27 @@ namespace WebAPI.Controllers
 
 
 
+        //RentACar projesinde;
+
+        //Brand listesinde herhangi bir marka seçildiğinde, o markaya ait arabaları listeleyiniz.
+
+        //Color listesinde herhangi bir renk seçildiğinde, o renge ait arabaları listeleyiniz.
+
+        //Car listesinde bir arabaya tıklandığında o arabaya ait detay sayfası oluşturunuz.Bu sayfada bu araca ait resimleri de gösteriniz.
 
 
 
+        [HttpGet("getforcardetail/{id}")]
+        public IActionResult GetForCarDetails(int id)
+        {
+            var result = _carService.GetForCarDetails(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
 
 
 
@@ -151,10 +184,25 @@ namespace WebAPI.Controllers
 
         }
 
+        [HttpGet("getcarbrandId")]
+
+        public IActionResult GetByBrandId(int brandId)
+        {
+            var result = _carService.GetAllBrandId(brandId);
+            if (result.Success)
+            {
+
+                return Ok(result);
+
+            }
+
+            return BadRequest(result.Message);
+        }
 
 
 
-      [HttpPost("delete")]
+
+        [HttpPost("delete")]
 
       public IActionResult Delete(Car car)
         {
