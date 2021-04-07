@@ -28,7 +28,7 @@ namespace Business.Concrete
         public IResult Add(CarImages carImages)
         {
           var result =  BusinessRules.Run(CarImageLimitChecking(carImages.CarId));
-            if (result is null)
+            if (result!=null)
             {
                 return result;
 
@@ -109,11 +109,11 @@ namespace Business.Concrete
 
 
 
-        private IResult CarImageLimitChecking(int carImageId)
+        private IResult CarImageLimitChecking(int carId)
         {
-            var imgCount = _carImagesDal.GetAll().Count();
+            var imgCount = _carImagesDal.GetAll(c=>c.CarId==carId).Count();
 
-            if (imgCount<=5)
+            if (imgCount>=5)
             {
                 return new ErrorResult(Messages.CarLimitedDenied);
             }
@@ -126,14 +126,14 @@ namespace Business.Concrete
         public IDataResult<List<CarImages>> GetListByCardId(int carId)
         {
             var GetList = _carImagesDal.GetAll(c => c.CarId == carId);
-            if (GetList.Count() > 0)
+            if (GetList.Count> 0)
             {
                 return new SuccessDataResult<List<CarImages>>(GetList, Messages.Listed);
 
 
             }
 
-            var defaultPath = PathName.ImagesCarDefault;
+            var defaultPath = PathName.CarDefaultImages;
             var ImageDefault = new List<CarImages> { new CarImages { ImagePath = defaultPath } };
 
 

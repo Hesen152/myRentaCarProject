@@ -11,3 +11,16 @@ C:\Users\User\source\repos\RenTaCarProyekt\DataAccess\bin\Debug\netstandard2.0\E
 C:\Users\User\source\repos\RenTaCarProyekt\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CopyComplete
 C:\Users\User\source\repos\RenTaCarProyekt\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
 C:\Users\User\source\repos\RenTaCarProyekt\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\bin\Debug\netstandard2.0\DataAccess.deps.json
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\bin\Debug\netstandard2.0\DataAccess.dll
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\bin\Debug\netstandard2.0\DataAccess.pdb
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\bin\Debug\netstandard2.0\Core.dll
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.csprojAssemblyReference.cache
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfo.cs
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CopyComplete
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
+C:\Users\User\Desktop\MYRENTACAR\myRentaCarProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb

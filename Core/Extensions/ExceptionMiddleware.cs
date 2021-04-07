@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -37,10 +38,26 @@ namespace Core.Extensions
             //If there is a request that does not comply with the rule in the validation rules, I want it to be shown to the user.
 
             string message = "Internal Server Error";
+            IEnumerable<ValidationFailure> errors;
             if (e.GetType() == typeof(ValidationException))
             {
+
                 message = e.Message;
-            }
+                errors = ((ValidationException)e).Errors;
+                httpContext.Response.StatusCode = 400;
+            
+
+            return httpContext.Response.WriteAsync(new ValidationErrorDetails
+            {
+                StatusCode = 400,
+                Message = message,
+                ValidationErrors = errors
+
+
+
+            }.ToString()); 
+
+        }
 
             return httpContext.Response.WriteAsync(new ErrorDetails
             {

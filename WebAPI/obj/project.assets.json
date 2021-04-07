@@ -9217,11 +9217,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9240,8 +9240,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Business\\Business.csproj"
+            "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Business\\Business.csproj"
             }
           }
         }

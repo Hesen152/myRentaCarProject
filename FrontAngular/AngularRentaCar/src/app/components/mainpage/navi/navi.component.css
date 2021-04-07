@@ -1,1 +1,10 @@
-#navbar{background-color:red;}
+#navbarSupportedContent{background-color:rgb(78, 71, 104)}
+
+li{margin-left: 24px;}
+
+a:hover{ background-color:thistle;}
+
+
+
+#navi{background-color: rgb(221, 25, 117);margin-top: 8px;}
+a {font-style: initial; font-family:Verdana, Geneva, Tahoma, sans-serif}

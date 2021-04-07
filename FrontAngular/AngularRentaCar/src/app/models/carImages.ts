@@ -3,4 +3,5 @@ export interface CarImages{
   carId:number;
   imagePath:string;
   date:Date;
+  image:string
 }

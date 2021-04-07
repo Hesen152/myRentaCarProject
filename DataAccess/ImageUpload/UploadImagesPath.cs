@@ -15,14 +15,14 @@ namespace DataAccess.ImageUpload
             var getextension = Path.GetExtension(imageFile.FileName).ToLower();
             var ImageName = DateTime.Now.ToString("sdsadsa") + new Guid() + getextension;
 
-            var imagePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()) + PathName.CarImagess, ImageName);
+            var imagePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()) + PathName.AddCarImage, ImageName);
 
             using (var fileStream = new FileStream(imagePath, FileMode.Create))
             {
                 await imageFile.CopyToAsync(fileStream);
             }
 
-            string imagePathAndName = PathName.CarImagess + "\\" + ImageName;
+            string imagePathAndName = PathName.CarImages + "\\" + ImageName;
 
             return imagePathAndName;
 

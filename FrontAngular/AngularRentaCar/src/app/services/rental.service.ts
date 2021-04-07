@@ -9,6 +9,8 @@ import { Rental } from '../models/rental';
 })
 export class RentalService {
 
+  rentingCar:Rental;
+
   apiUrl="https://localhost:44373/api/";
 
 
@@ -19,4 +21,25 @@ export class RentalService {
     let newPath=this.apiUrl+"rental/getrentaldetails";
     return this.httpCLient.get<ListResponseModel<Rental>>(newPath)
   }
+
+  setRentingCar(rental:Rental){
+    this.rentingCar=rental;
+  }
+
+
+  getRentingCar(){
+    this.rentingCar==null
+  }
+
+  removeRentingCar(){
+    this.rentingCar==null;
+  }
+
+
+ getRentalByCarId(carId:number):Observable<ListResponseModel<Rental>>{
+   let newPath=this.apiUrl+'rental/getrentalbycarid/'+carId;
+   return this.httpCLient.get<ListResponseModel<Rental>>(newPath);
+ }
+
+
 }

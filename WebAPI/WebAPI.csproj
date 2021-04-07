@@ -20,7 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Images\" />
+    <Folder Include="CustomRouteConstraints\" />
+    <Folder Include="wwwroot\Uploads\Images\CarImages\" />
   </ItemGroup>
 
 

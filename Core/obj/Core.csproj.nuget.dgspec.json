@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Core\\Core.csproj": {}
+    "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Core\\Core.csproj": {
+    "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Core\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

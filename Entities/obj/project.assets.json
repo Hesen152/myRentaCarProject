@@ -4735,11 +4735,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4758,8 +4758,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Core\\Core.csproj"
+            "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Core\\Core.csproj"
             }
           }
         }

@@ -1,8 +1,9 @@
-import { CarImages } from "./carImages";
 
 export interface Car{
 
   id:number;
+  brandId:number;
+  name:string;
   brandName:string;
     carName:string,
     dailyPrice:number;

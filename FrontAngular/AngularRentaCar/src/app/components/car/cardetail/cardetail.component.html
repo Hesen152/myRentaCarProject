@@ -1,18 +1,22 @@
 
 <div class="row">
+{{carDetail.brandName}}
   <div
-    class="card mb-3 mx-3 pt-3 px-3"
+    class="card mb-3 mx-3 pt-3 px-3 "
     style="width: 120rem;height:30rem;"
     *ngFor="let carImage of carImages"
   >
-    <img class="card-img-top  " style="width:40rem;height:30rem;margin-left:10px" src="{{imageUrl}}{{carImage.imagePath}}" alt="Card image cap">
+    <img class="card-img-top  " style="width:20rem;height:15rem;margin-left:10px" src="{{imageBaseUrl+carImage.imagePath}}" alt="Card image cap">
 
 
     <div class="card-body">
-      <h2 class="card-title"> CarName:{{ car.carName }}</h2>
-      <p class="card-text"><b>Model Year: </b>{{ car.modelYear }}</p>
-            <p class="card-text"><b> Description:{{car.description}} </b></p>
+      <h2 class="card-title"> CarName:{{ carDetail.carName }}</h2>
+      <p class="card-text"><b>Model Year: </b>{{ carDetail.modelYear }}</p>
+           <p class="card-text"><b> Description:{{carDetail.description}} </b></p>
 
-          <button  type="button" class="btn btn-warning">Kirala</button>
+
+
   </div>
 </div>
+</div>
+<app-car-rent></app-car-rent>

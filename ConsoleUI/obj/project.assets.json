@@ -6326,11 +6326,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6349,11 +6349,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\Business\\Business.csproj"
+            "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\Business\\Business.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\RenTaCarProyekt\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\MYRENTACAR\\myRentaCarProject\\DataAccess\\DataAccess.csproj"
             }
           }
         }

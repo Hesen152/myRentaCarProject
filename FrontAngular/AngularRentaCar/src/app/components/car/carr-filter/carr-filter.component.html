@@ -1,0 +1,61 @@
+
+<div class="mb-3">
+   <select class="form-select rounded-0" [(ngModel)]="brandFilter">
+      <option value="0">- - Marka Secin - -</option>
+
+      <option *ngFor="let brand of brands" value="{{ brand.id }}">
+         {{ brand.name }}
+      </option>
+   </select>
+</div>
+
+
+
+<div class="row" *ngIf="brandFilter > 0">
+   <div class="col-lg mb-3 mb-lg-0">
+      <div class="d-grid">
+         <button class="btn btn-outline-primary"
+                 routerLink="/cars" (click)="clearFilter()">
+            <i class="bi-backspace me-1"></i> Temizle
+         </button>
+      </div>
+   </div>
+   <div class="col-lg">
+      <div class="d-grid">
+         <button class="btn btn-primary"
+                 routerLink="/cars/filter/{{ brandFilter }}">
+            <i class="bi-search me-1"></i> Filter
+         </button>
+      </div>
+   </div>
+</div>
+
+
+
+
+
+<!--<select
+  style="margin-bottom: 10px; width: 220px"
+  class="form-select form-select-sm"
+  aria-label=".form-select-sm example"
+>
+  <option selected>Open this select menu</option>
+
+  <option
+   *ngFor="let brand of brands"
+    (click)="FilterValue(brand)">
+    {{ brand.name }}
+
+
+  </option>
+</select>
+
+<a
+  style="margin-left: 15px;width:190px;"
+  type="submit"
+  class="btn btn-secondary"
+  routerlink="brands"
+>
+  Filter
+</a>
+-->

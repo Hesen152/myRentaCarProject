@@ -86,6 +86,19 @@ namespace Business.Concrete
 
         }
 
+        public IDataResult<List<Rental>> GetRentalByCarId(int carId)
+        {
+            var getrentalByCarId = _rentalDal.GetAll(rental=>rental.CarId==carId);
+
+            if (getrentalByCarId is null)
+            {
+
+                return new ErrorDataResult<List<Rental>>(Messages.NotFound);
+            }
+
+            return new SuccessDataResult<List<Rental>>(getrentalByCarId);
+        }
+
         public IDataResult<List<RentalDetailDto>> GetRentalDetails()
         {
             var rentalDetails = _rentalDal.GetRentalDetails();
@@ -106,7 +119,7 @@ namespace Business.Concrete
                 return new SuccesResult(Messages.NotFound);
 
             }
-            _rentalDal.Update(rentalByUpdate);
+            _rentalDal.Update(rental);
 
             return new SuccesResult(Messages.Updated);
             

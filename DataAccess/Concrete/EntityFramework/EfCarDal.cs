@@ -73,7 +73,7 @@ namespace DataAccess.Concrete.EntityFramework
 
                              };
 
-                return result.FirstOrDefault();
+                return result.AsNoTracking().FirstOrDefault();
             }
         }
 
