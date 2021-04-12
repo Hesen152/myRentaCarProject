@@ -7,10 +7,13 @@ using System.Text;
 
 namespace Business.Abstract
 {
-   public interface IUserService
+    public interface IUserService
     {
-        List<OperationClaim> GetClaims(User user);
-        User GetByMail(string email);
+       IDataResult<List<OperationClaim>> GetClaims(User user);
+        IResult ProfileUpdate(User user, string password);
+
+        IDataResult<User> GetByMail(string email);
+        IDataResult<Findeks> GetUserFindeks(Findeks findeks);
 
         IDataResult<List<User>> GetAll();
         IDataResult<User> GetById(int userId);

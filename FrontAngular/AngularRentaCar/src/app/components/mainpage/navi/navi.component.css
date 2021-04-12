@@ -1,4 +1,4 @@
-#navbarSupportedContent{background-color:rgb(78, 71, 104)}
+#navbarSupportedContent{background-color:rgb(223, 213, 209)}
 
 li{margin-left: 24px;}
 
@@ -7,4 +7,4 @@ a:hover{ background-color:thistle;}
 
 
 #navi{background-color: rgb(221, 25, 117);margin-top: 8px;}
-a {font-style: initial; font-family:Verdana, Geneva, Tahoma, sans-serif}
+a {font-style: initial; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}

@@ -34,7 +34,6 @@ export class CarComponent implements OnInit {
       imageBaseUrl='https://localhost:44373/';
 
 
-
    getCars(){
      this.carService.getCars().subscribe((response)=>{
        this.cars=response.data

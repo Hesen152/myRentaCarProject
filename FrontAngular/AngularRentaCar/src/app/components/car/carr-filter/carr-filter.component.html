@@ -1,7 +1,7 @@
 
 <div class="mb-3">
-   <select class="form-select rounded-0" [(ngModel)]="brandFilter">
-      <option value="0">- - Marka Secin - -</option>
+   <select  style="width:12rem" class="form-select rounded-0" [(ngModel)]="brandFilter">
+      <option value="0">- - Choose a Brand - -</option>
 
       <option *ngFor="let brand of brands" value="{{ brand.id }}">
          {{ brand.name }}

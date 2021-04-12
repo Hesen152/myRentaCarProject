@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-card',
@@ -9,7 +10,18 @@ export class CardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit() {
+
+    $().ready(function(){
+      $("btn").click(function(){
+          var div = $("div");
+          div.animate({left: '100px'}, "slow");
+          div.animate({fontSize: '5em'}, "slow");
+      });
+  });
   }
+
+
+
 
 }

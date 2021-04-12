@@ -55,4 +55,10 @@ apiUrl="https://localhost:44373/api/";
     return this.httpClient.post<ResponseModel>(newPath,car);
   }
 
+
+  updateCar(car:Car):Observable<ResponseModel>{
+    let newPath=this.apiUrl+"car/update";
+    return this.httpClient.post<ResponseModel >(newPath,car);
+  }
+
 }

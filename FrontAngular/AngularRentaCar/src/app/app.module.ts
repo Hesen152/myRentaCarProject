@@ -1,11 +1,14 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
  import {FormsModule} from '@angular/forms';
 import {ToastrModule } from  'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatCarouselModule } from '@ngmodule/material-carousel';
+import { MatSliderModule } from '@angular/material/slider';
+
 
 import { AppComponent } from './app.component';
 import { BrandComponent } from './components/brand/brand.component';
@@ -23,7 +26,11 @@ import { CarRentComponent } from './components/car/car-rent/car-rent/car-rent.co
 import { CarrFilterComponent } from './components/car/carr-filter/carr-filter.component';
 import { CardComponent } from './components/card/card.component';
 import { CarAddComponent } from './components/car-add/car-add.component';
-import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { CarUpdateComponent } from './components/car/car-update/car-update.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { RegisterComponent } from './components/register/register/register.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +49,11 @@ import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     CarRentComponent,
     CarrFilterComponent,
     CardComponent,
-    CarAddComponent
+    CarAddComponent,
+    CarUpdateComponent,
+    LoginComponent,
+    RegisterComponent,
+    AdminPanelComponent
 
   ],
   imports: [
@@ -56,11 +67,13 @@ import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
       positionClass: 'toast-bottom-right'
 
   }
-    ),
-    FontAwesomeModule
+    )
 
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

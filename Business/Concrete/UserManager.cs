@@ -1,6 +1,9 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Aspects.Autofac.Performance;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
+using Core.Utilities.Security.Hashing;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -37,22 +40,41 @@ namespace Business.Concrete
 
         public IDataResult<List<User>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = _userDal.GetAll();
+
+            if (result is null)
+            {
+                return new ErrorDataResult<List<User>>(Messages.NotFound);
+
+            }
+
+            return new SuccessDataResult<List<User>>(result, Messages.Listed);
+
         }
 
         public IDataResult<User> GetById(int userId)
         {
-            throw new NotImplementedException();
+            var result = _userDal.Get(c => c.Id == userId);
+            if (result is null)
+            {
+
+                return new ErrorDataResult<User>(Messages.NotFound);
+
+
+            }
+
+            return new SuccessDataResult<User>(result, Messages.Listed); 
+        }
+        [PerformanceAspect(5)]
+        public IDataResult<User> GetByMail(string email)
+        {
+            return new SuccessDataResult<User>(_userDal.Get(u => u.Email == email));
         }
 
-        public User GetByMail(string email)
+        public IDataResult<List<OperationClaim>> GetClaims(User user)
         {
-            return _userDal.Get(u => u.Email == email);
-        }
+            return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user));
 
-        public List<OperationClaim> GetClaims(User user)
-        {
-            return _userDal.GetClaims(user);
         }
 
         public IResult Update(User user)
@@ -61,14 +83,48 @@ namespace Business.Concrete
         }
 
 
-        IDataResult<List<User>> IUserService.GetAll()
+     
+
+     
+
+       
+
+        public IResult ProfileUpdate(User user, string password)
         {
-            throw new NotImplementedException();
+            byte[] passwordHash, passwordSalt;
+            HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
+            var updatedUser = new User
+            {
+                Id = user.Id,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt,
+                Status = user.Status
+
+            };
+
+            _userDal.Update(updatedUser);
+            return new SuccesResult(Messages.Updated);
+
         }
 
-        IDataResult<User> IUserService.GetById(int userId)
+     
+
+        public IDataResult<Findeks> GetUserFindeks(Findeks findeks)
         {
-            throw new NotImplementedException();
+            Random rmd = new Random();
+
+            var userFindeks = new Findeks
+            {
+                Tc = findeks.Tc,
+                DataYear = findeks.DataYear,
+                UserFindeks = rmd.Next(0, 1900)
+
+            };
+
+            return new SuccessDataResult<Findeks>(userFindeks);
         }
     }
 }
